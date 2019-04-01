@@ -1,0 +1,272 @@
+@import "all.min.css";
+@import "owl.carousel.min.css";
+@import "owl.theme.default.min.css";
+
+$aqua_color: #44c0c2;
+$font_color: #484c55;
+
+@mixin max-screen($res){
+  @media screen and (max-width: $res){
+    @content
+  }
+}
+@mixin min-screen($res){
+  @media screen and (min-width: $res){
+    @content
+  }
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+%btn{
+  display: block;
+  margin: auto;
+  width: 225px;
+  line-height: 65px;
+  color: white;
+  font-size: 26px;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  border: solid 1px white;
+  @include border-radius(5px);
+  &:hover{
+    background-color: white;
+    color: black;
+    border-color: transparent;
+    transition: 0.3s;
+    -webkit-box-shadow: 0 0 10px 0 #000000;
+    box-shadow: 0 0 10px 0 #000000;
+  }
+}
+
+header{
+  background-color: white;
+  .navbar-toggle{
+    border-color: $font_color;
+    span{
+      background-color: $font_color;
+    }
+  }
+  .navbar{
+    margin-bottom: 0;
+    border: none;
+  }
+  .navbar-brand{
+    font-size: 43px;
+    color: $aqua_color;
+    &:hover{
+      color: $aqua_color;
+    }
+  }
+  .navbar-nav>li>a {
+    color: $font_color;
+    font-size: 15px;
+    border-bottom: solid 2px transparent;
+    &:focus {
+      background: none;
+    }
+    &:hover {
+      border-bottom: solid 2px $aqua_color;
+      background: none;
+      @include max-screen(767px) {
+        border-bottom: solid 2px transparent;
+        padding-bottom: 10px;
+      }
+    }
+  }
+  .container>.navbar-collapse{
+    margin: auto;
+    text-align: center;
+  }
+}
+.hero{
+  .owl-carousel{
+    background: url("../images/Layer4.png") no-repeat;
+    background-size: cover;
+    .item {
+      //width: 60%;
+      margin: auto;
+      h3 {
+        text-align: center;
+        font-size: 63px;
+        color: white;
+        padding-top: 10%;
+        @include max-screen(1023px) {
+          font-size: 42px;
+        }
+      }
+      p {
+        text-align: center;
+        font-size: 23px;
+        color: white;
+        padding-bottom: 5%;
+        padding-top: 2%;
+        @include max-screen(1023px) {
+          font-size: 21px;
+        }
+      }
+      a{
+        @extend %btn;
+        margin-bottom: 10%;
+      }
+    }
+  }
+  .owl-carousel .owl-nav .owl-prev,
+  .owl-carousel .owl-nav .owl-next,
+  .owl-carousel .owl-dot {
+    font-family: 'fontAwesome';
+  }
+  .owl-nav .owl-prev {
+    position: absolute;
+    top: 45%;
+    right: 85%;
+    margin-right: 50px;
+    outline: none;
+    &:after {
+      display: block;
+      content: "";
+      border: solid $aqua_color 2px;
+      border-bottom: none;
+      border-right: none;
+      transform: rotate(-45deg);
+      width: 20px;
+      height: 20px;
+    }
+    &:before{
+      display: block;
+      content: "";
+      width: 60px;
+      height: 60px;
+      @include border-radius(30px);
+      border: solid 1px white;
+      background-color: white;
+      position: absolute;
+      left: -24px;
+      top: -20px;
+      z-index: -1;
+    }
+  }
+  .owl-nav .owl-next{
+    position: absolute;
+    top: 45%;
+    left: 85%;
+    margin-left: 50px;
+    outline: none;
+    &:after{
+      display: block;
+      content: "";
+      border: solid $aqua_color 2px;
+      border-bottom: none;
+      border-left: none;
+      transform: rotate(45deg);
+      width: 20px;
+      height: 20px;
+    }
+    &:before{
+      display: block;
+      content: "";
+      width: 60px;
+      height: 60px;
+      @include border-radius(30px);
+      border: solid 1px white;
+      background-color: white;
+      position: absolute;
+      left: -17px;
+      top: -20px;
+      z-index: -1;
+    }
+  }
+  .panel-heading{
+    background-color: $aqua_color;
+    color: white;
+    text-decoration: none;
+  }
+  .panel-body {
+    background: url("../images/Layer4.png") no-repeat;
+    background-size: cover;
+    .more {
+      @extend %btn;
+      width: 110px;
+      line-height: 30px;
+      font-size: 14px;
+      margin-bottom: 15%;
+      margin-top: 5%;
+    }
+  }
+  a{
+    &:hover{
+      text-decoration: none;
+    }
+    &:focus{
+      text-decoration: none;
+    }
+  }
+  h4{
+    font-size: 21px;
+  }
+  p{
+    font-size: 14px;
+    color: white;
+    margin-top: 10%;
+  }
+}
+.team{
+  h2{
+    font-size: 42px;
+    color: $font_color;
+    padding-bottom: 140px;
+    padding-top: 100px;
+  }
+  .for_img{
+    width: 200px;
+    height: 200px;
+    background-color: #eeeef0;
+    display: inline-block;
+    @include border-radius(50%);
+    position: relative;
+    overflow: hidden;
+    img{
+      width: 100%;
+    }
+    &:hover{
+      &:after{
+        //opacity: 1;
+        top: 84px;
+      }
+    }
+    &:after{
+      content: "";
+      display: block;
+      background-image: url("../images/+.png");
+      width: 42px;
+      height: 42px;
+      position: absolute;
+      left: 50%;
+      margin-left: -21px;
+      top: -84px;
+      //opacity: 0;
+      transition: 0.5s;
+    }
+  }
+  h3{
+    font-size: 22px;
+    color: $font_color;
+    margin-top: 75px;
+    span{
+      display: block;
+      font-size: 14px;
+      margin-top: 15px;
+    }
+  }
+  p{
+    font-size: 14px;
+    color: $font_color;
+    margin-top: 40px;
+    padding-bottom: 100px;
+  }
+}
