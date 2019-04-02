@@ -79,10 +79,6 @@ header {
           font-size: 21px; } }
     .hero .owl-carousel .item a {
       margin-bottom: 10%; }
-.hero .owl-carousel .owl-nav .owl-prev,
-.hero .owl-carousel .owl-nav .owl-next,
-.hero .owl-carousel .owl-dot {
-  font-family: 'fontAwesome'; }
 .hero .owl-nav .owl-prev {
   position: absolute;
   top: 45%;
@@ -211,5 +207,55 @@ header {
   color: #484c55;
   margin-top: 40px;
   padding-bottom: 100px; }
+
+.plans {
+  background-color: #f1f1f1;
+  padding: 120px 0 100px; }
+  .plans .panel {
+    width: 100%; }
+    .plans .panel .panel-heading {
+      background-color: #485460;
+      color: white;
+      line-height: 75px; }
+      @media screen and (max-width: 1169px) {
+        .plans .panel .panel-heading {
+          max-width: 100%; } }
+    .plans .panel .list-group {
+      border: transparent; }
+      @media screen and (max-width: 1169px) {
+        .plans .panel .list-group {
+          max-width: 100%; } }
+      .plans .panel .list-group .list-group-item {
+        line-height: 45px;
+        border: solid 1px #ecf0f1; }
+        .plans .panel .list-group .list-group-item:first-child {
+          line-height: 70px;
+          background-color: #f8f9fb; }
+    .plans .panel .for_btn {
+      line-height: 100px;
+      background-color: #f8f9fb; }
+      @media screen and (max-width: 1169px) {
+        .plans .panel .for_btn {
+          max-width: 100%; } }
+      .plans .panel .for_btn a {
+        width: 170px;
+        line-height: 40px;
+        color: white;
+        background-color: #788492;
+        display: inline-block;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        border-radius: 3px; }
+        .plans .panel .for_btn a:hover {
+          text-decoration: none;
+          -webkit-box-shadow: 0 0 10px 0 #5E5959;
+          box-shadow: 0 0 10px 0 #5E5959; }
+        .plans .panel .for_btn a:focus {
+          text-decoration: none; }
+  .plans .aqua .panel-heading {
+    background-color: #44c0c2; }
+  .plans .aqua .for_btn a {
+    background-color: #44c0c2; }
 
 /*# sourceMappingURL=style.css.map */
