@@ -2,6 +2,28 @@
 @import "owl.carousel.min.css";
 @import "owl.theme.default.min.css";
 
+@font-face {
+  font-family: 'opensans';
+  src: url("../fonts/opensans.eot");
+  src: url("../fonts/opensans.eot") format("embedded-opentype"), url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff"), url("../fonts/opensans.ttf") format("truetype"), url("../fonts/opensans.svg#opensans") format("svg"); }
+@font-face {
+  font-family: 'OpenSansLight';
+  src: url("../fonts/OpenSansLight.eot");
+  src: url("../fonts/OpenSansLight.eot") format("embedded-opentype"), url("../fonts/OpenSansLight.woff2") format("woff2"), url("../fonts/OpenSansLight.woff") format("woff"), url("../fonts/OpenSansLight.ttf") format("truetype"), url("../fonts/OpenSansLight.svg#OpenSansLight") format("svg"); }
+@font-face {
+  font-family: 'OpenSansSemibold';
+  src: url("../fonts/OpenSansSemibold.eot");
+  src: url("../fonts/OpenSansSemibold.eot") format("embedded-opentype"), url("../fonts/OpenSansSemibold.woff2") format("woff2"), url("../fonts/OpenSansSemibold.woff") format("woff"), url("../fonts/OpenSansSemibold.ttf") format("truetype"), url("../fonts/OpenSansSemibold.svg#OpenSansSemibold") format("svg"); }
+@font-face {
+  font-family: 'Lobster_1_4';
+  src: url('../fonts/Lobster_1_4.eot');
+  src: url('../fonts/Lobster_1_4.eot') format('embedded-opentype'),
+  url('../fonts/Lobster_1_4.woff2') format('woff2'),
+  url('../fonts/Lobster_1_4.woff') format('woff'),
+  url('../fonts/Lobster_1_4.ttf') format('truetype'),
+  url('../fonts/Lobster_1_4.svg#Lobster_1_4') format('svg');
+}
+
 $aqua_color: #44c0c2;
 $font_color: #484c55;
 
@@ -59,6 +81,7 @@ header{
   .navbar-brand{
     font-size: 43px;
     color: $aqua_color;
+    font-family: 'Lobster_1_4';
     &:hover{
       color: $aqua_color;
     }
@@ -67,12 +90,13 @@ header{
     color: $font_color;
     font-size: 15px;
     border-bottom: solid 2px transparent;
+    font-family: 'opensans';
     &:focus {
       background: none;
     }
     &:hover {
       border-bottom: solid 2px $aqua_color;
-      background: none;
+      background-color: #f8f9fb;
       @include max-screen(767px) {
         border-bottom: solid 2px transparent;
         padding-bottom: 10px;
@@ -95,6 +119,7 @@ header{
         text-align: center;
         font-size: 63px;
         color: white;
+        font-family: 'opensans';
         padding-top: 10%;
         @include max-screen(1023px) {
           font-size: 42px;
@@ -104,6 +129,7 @@ header{
         text-align: center;
         font-size: 23px;
         color: white;
+        font-family: 'opensans';
         padding-bottom: 5%;
         padding-top: 2%;
         @include max-screen(1023px) {
@@ -112,6 +138,7 @@ header{
       }
       a{
         @extend %btn;
+        font-family: 'opensans';
         margin-bottom: 10%;
       }
     }
@@ -180,6 +207,7 @@ header{
     background-color: $aqua_color;
     color: white;
     text-decoration: none;
+    font-family: 'opensans';
   }
   .panel-body {
     background: url("../images/Layer4.png") no-repeat;
@@ -189,6 +217,7 @@ header{
       width: 110px;
       line-height: 30px;
       font-size: 14px;
+      font-family: 'opensans';
       margin-bottom: 15%;
       margin-top: 5%;
     }
@@ -203,11 +232,13 @@ header{
   }
   h4{
     font-size: 21px;
+    font-family: 'opensans';
   }
   p{
     font-size: 14px;
     color: white;
     margin-top: 10%;
+    font-family: 'opensans';
   }
 }
 .team{
@@ -216,6 +247,7 @@ header{
     color: $font_color;
     padding-bottom: 140px;
     padding-top: 100px;
+    font-family: 'opensans';
   }
   .for_img{
     width: 200px;
@@ -252,10 +284,12 @@ header{
     font-size: 22px;
     color: $font_color;
     margin-top: 75px;
+    font-family: 'opensans';
     span{
       display: block;
       font-size: 14px;
       margin-top: 15px;
+      font-family: 'opensans';
     }
   }
   p{
@@ -263,6 +297,7 @@ header{
     color: $font_color;
     margin-top: 40px;
     padding-bottom: 100px;
+    font-family: 'opensans';
   }
 }
 .plans{
@@ -274,6 +309,8 @@ header{
       background-color: #485460;
       color: white;
       line-height: 75px;
+      font-size: 26px;
+      font-family: 'opensans';
       @include max-screen(1169px){
         max-width: 100%;
       }
@@ -286,8 +323,13 @@ header{
       .list-group-item{
         line-height: 45px;
         border: solid 1px #ecf0f1;
+        color: #8c9299;
+        font-size: 14px;
+        font-family: 'opensans';
         &:first-child{
           line-height: 70px;
+          color: #485460;
+          font-size: 20px;
           background-color: #f8f9fb;
         }
       }
@@ -304,6 +346,8 @@ header{
         color: white;
         background-color: #788492;
         display: inline-block;
+        font-size: 17px;
+        font-family: 'opensans';
         @include border-radius(3px);
         &:hover{
           text-decoration: none;
@@ -323,6 +367,92 @@ header{
     .for_btn {
       a {
         background-color: $aqua_color;
+      }
+    }
+  }
+}
+footer{
+  background: url("../images/footer_img.png") no-repeat;
+  background-size: cover;
+  .btn{
+    width: 170px;
+    line-height: 25px;
+    margin-bottom: 100px;
+    background-color: #49cbcd;
+    color: white;
+    font-family: 'opensans';
+    &:hover{
+      -webkit-box-shadow: 0 0 10px 0 #5E5959;
+      box-shadow: 0 0 10px 0 #5E5959;
+      color: white;
+    }
+  }
+  .footer_text{
+    font-family: 'opensans';
+    @include max-screen(1023px){
+      font-size: 11px;
+    }
+    @include max-screen(415px){
+      font-size: 5px;
+    }
+    font-size: 14px;
+    color: #bface2;
+  }
+  .social_icon{
+    display: inline-block;
+    text-align: center;
+    font-size: 21px;
+    width: 42px;
+    line-height: 42px;
+    color: white;
+    margin: 40px 15px 22px 0;
+    border: solid 1px transparent;
+    @include border-radius(21px);
+    background-color: #3b5997;
+    &:last-child{
+    background-color: red;
+      &:hover{
+        color: red;
+      }
+  }
+    &:nth-child(2){
+      background-color: #3ec2f3;
+      &:hover{
+        color: #3ec2f3;
+      }
+    }
+    &:hover{
+      color: #3b5997;
+      background-color: white;
+      border-color: black;
+      transition: 0.3s;
+    }
+  }
+  p{
+    color: white;
+    font-size: 14px;
+    font-family: 'opensans';
+  }
+  h3{
+    font-size: 24px;
+    color: white;
+    font-family: 'opensans';
+  }
+  h2{
+    font-size: 42px;
+    color: white;
+    padding-bottom: 140px;
+    padding-top: 100px;
+    font-family: 'opensans';
+  }
+  .for_lg{
+    @include min-screen(1199px){
+      text-align: left;
+      p{
+        text-align: left;
+      }
+      h3{
+        text-align: left;
       }
     }
   }
